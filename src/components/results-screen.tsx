@@ -52,6 +52,7 @@ export default function ResultsScreen({
   onReset
 }: ResultsScreenProps) {
   const [expandedMonth, setExpandedMonth] = useState<number | null>(null)
+  const bannerImageSrc = `${import.meta.env.BASE_URL}banner.webp`
   const goalStatus = plan.isAchievable
     ? {
         title: 'Отличный прогресс - цель достижима',
@@ -138,7 +139,7 @@ export default function ResultsScreen({
 
           <div className="relative -mb-8 hidden h-52 self-end md:block">
             <img
-              src="/banner.webp"
+              src={bannerImageSrc}
               alt=""
               className="absolute bottom-0 right-0 h-[260px] w-[260px] max-w-none object-contain"
             />
